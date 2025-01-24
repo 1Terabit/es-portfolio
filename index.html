@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edwar Susarra - Desarrollador Full Stack</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="resources/black.png" type="image/png">
+</head>
+<body>
+    <nav class="navbar">
+        <select id="languageSelect" aria-label="Select Language">
+            <option value="es">🇪🇸</option>
+            <option value="en">🇺🇸</option>
+        </select>
+        <button class="theme-toggle" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+        </button>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="binary-rain"></div>
+        <div class="hero-content">
+            <img src="resources/black.png" class="signature-logo light-logo" id="logoImageLight">
+            <img src="resources/white.png" class="signature-logo dark-logo" id="logoImageDark">
+            <p class="subtitle animate-text" data-i18n="hero.role.es">Ingeniero en desarrollo de Software | Desarrollador Full Stack | Especialista en Backend | CEH Certificado Ethical Hacker</p>
+            <p class="subtitle animate-text" data-i18n="hero.role.en" style="display:none;">Software Engineer | Full Stack Developer | Backend Specialist | CEH Certified Ethical Hacker</p>
+        </div>
+        <script src="js/binary-rain.js"></script>
+    </section>
+
+    <div class="binary-rain"></div>
+    <section id="about" class="about-section">
+        <h2 class="section-title" data-i18n="about.title">Sobre Mí</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p data-i18n="about.description">Desarrollador de Software Senior con amplia experiencia en desarrollo Full Stack y especialización en Backend. Certificado como Ethical Hacker (CEH), con un historial probado en la construcción de sistemas robustos y escalables.</p>
+                <div class="education">
+                    <h3 data-i18n="about.education.title">Educación</h3>
+                    <p><i class="fas fa-graduation-cap"></i> <span data-i18n="about.education.degree">TSU en Informática, IUTA, 2013 - 2017</span></p>
+                    <p><i class="fas fa-language"></i> <span data-i18n="about.education.languages">Español nativo, Inglés intermedio</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills-section">
+        <h2 class="section-title" data-i18n="skills.title">Habilidades Técnicas</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fas fa-code"></i>
+                <h3 data-i18n="skills.languages.title">Lenguajes de Programación</h3>
+                <p data-i18n="skills.languages.description">Typescript, Javascript, Java, Python, Golang</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-cloud"></i>
+                <h3 data-i18n="skills.cloud.title">Cloud & DevOps</h3>
+                <p data-i18n="skills.cloud.description">GCP, AWS, Docker, Kubernetes, GitLab CI/CD, Terraform</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-database"></i>
+                <h3 data-i18n="skills.databases.title">Bases de Datos</h3>
+                <p data-i18n="skills.databases.description">MySQL, PostgreSQL, MongoDB, Redis</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-server"></i>
+                <h3 data-i18n="skills.backend.title">Backend</h3>
+                <p data-i18n="skills.backend.description">Django, NodeJS, NestJS, Spring Boot, Echo</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3 data-i18n="skills.frontend.title">Frontend & Mobile</h3>
+                <p data-i18n="skills.frontend.description">Angular, React, React Native, Ionic, Flutter</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3 data-i18n="skills.security.title">Seguridad</h3>
+                <p data-i18n="skills.security.description">OAuth, JWT, RBAC, Gestión de Sesiones, Análisis de Vulnerabilidades, Pruebas de Penetración, CEH</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-user-secret"></i>
+                <h3 data-i18n="skills.osint.title">OSINT</h3>
+                <p data-i18n="skills.osint.description">Búsqueda y análisis de información, Maltego, Shodan, SET, SpiderFoot, análisis de datos</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-bug"></i>
+                <h3 data-i18n="skills.ethicalhacking.title">Ethical Hacking</h3>
+                <p data-i18n="skills.ethicalhacking.description">Pentesting Web, Mobile & Network, Burp Suite, Metasploit, Nmap, Wireshark, Kali Linux</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-skull"></i>
+                <h3 data-i18n="skills.redteam.title">Red Team</h3>
+                <p data-i18n="skills.redteam.description">Post-Explotación, Evasión de EDR/AV, Ingeniería Social, Escalación de Privilegios, Persistencia</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-lock"></i>
+                <h3 data-i18n="skills.securityoffensive.title">Seguridad Ofensiva</h3>
+                <p data-i18n="skills.securityoffensive.description">XSS, SQLi, CSRF, RCE, Buffer Overflow, Reverse Engineering, Malware Analysis</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="experience-section">
+        <h2 class="section-title" data-i18n="experience.title">Experiencia Laboral</h2>
+        <div class="timeline">
+            <div class="experience-card highlight-card">
+                <h3 data-i18n="experience.consultor.title">Consultor Senior en Ciberseguridad</h3>
+                <p class="position" data-i18n="experience.consultor.position">División de Seguridad Bancaria - CICPC (Cuerpo de Investigaciones Científicas, Penales y Criminalísticas)</p>
+                <p class="date"><span data-i18n="experience.consultor.date">2024 - Presente</span></p>
+                <ul>
+                    <li data-i18n="experience.consultor.description1">Lideré la creación y estructuración de departamentos de ciberseguridad a nivel nacional para la División de Seguridad Bancaria del CICPC</li>
+                    <li data-i18n="experience.consultor.description2">Diseño e implementación de frameworks de seguridad adaptados a regulaciones bancarias y requisitos específicos de investigación criminal</li>
+                    <li data-i18n="experience.consultor.description3">Desarrollo de programas de evaluación y respuesta a incidentes de seguridad en el sector bancario</li>
+                    <li data-i18n="experience.consultor.description4">Asesoramiento en cumplimiento normativo, estándares de seguridad internacionales y procedimientos de investigación</li>
+                </ul>
+            </div>
+            <div class="experience-card">
+                <h3 data-i18n="experience.acidlabs.title">ACIDLABS - LATAM AIRLINES</h3>
+                <p class="position" data-i18n="experience.acidlabs.position">Desarrollador de Software Senior</p>
+                <p class="date" data-i18n="experience.acidlabs.date">2024 - PRESENTE</p>
+                <ul>
+                    <li data-i18n="experience.acidlabs.description1">Lidero el área de frontend del proyecto VideoWall</li>
+                    <li data-i18n="experience.acidlabs.description2">Optimicé el rendimiento de servicios en GCP</li>
+                    <li data-i18n="experience.acidlabs.description3">Implementé mejoras en la arquitectura del sistema</li>
+                </ul>
+            </div>
+            <div class="experience-card">
+                <h3 data-i18n="experience.witi.title">WITI - CENCOSUD CHILE</h3>
+                <p class="position" data-i18n="experience.witi.position">Desarrollador de Software Senior</p>
+                <p class="date" data-i18n="experience.witi.date">2021 - 2024</p>
+                <ul>
+                    <li data-i18n="experience.witi.description1">Desarrollo de microservicios con Java y Spring Boot</li>
+                    <li data-i18n="experience.witi.description2">Implementación de soluciones AWS Lambda</li>
+                    <li data-i18n="experience.witi.description3">Optimización de arquitectura y rendimiento</li>
+                </ul>
+            </div>
+            <div class="experience-card">
+                <h3 data-i18n="experience.ucropit.title">UCROPIT</h3>
+                <p class="position" data-i18n="experience.ucropit.position">Desarrollador de Software Senior</p>
+                <p class="date" data-i18n="experience.ucropit.date">2021 - 2021</p>
+                <ul>
+                    <li data-i18n="experience.ucropit.description1">Liderazgo de equipo frontend</li>
+                    <li data-i18n="experience.ucropit.description2">Optimización de rendimiento con Redis</li>
+                    <li data-i18n="experience.ucropit.description3">Desarrollo de servicios PDF</li>
+                </ul>
+            </div>
+            <div class="experience-card">
+                <h3 data-i18n="experience.shokworks.title">SHOKWORKS</h3>
+                <p class="position" data-i18n="experience.shokworks.position">Desarrollador de Software Senior</p>
+                <p class="date" data-i18n="experience.shokworks.date">2019 - 2020</p>
+                <ul>
+                    <li data-i18n="experience.shokworks.description1">Colabore en la migración de la plataforma Blockchain Kinesis hacia una arquitectura de microservicios con Java,
+                    reduciendo el tiempo de respuesta del soporte en un 70%. (Tecnologías: Java, Spring Boot, Solidity, Kafka, Docker)</li>
+                    <li data-i18n="experience.shokworks.description2">Construí sistemas robustos orientados a eventos con Kafka y AWS SQS para manejar un alto tráfico de manera eficiente.
+                    (Tecnologías: Kafka, AWS, SQS)</li>
+                    <li data-i18n="experience.shokworks.description3">Diseñe y desarrolle múltiples APIs que no solo cumplen con los requisitos funcionales, sino que también son robustas,
+                    escalables y seguras. (Tecnologías: NestJs, Typescript, Golang, Python, Java)</li>
+                </ul>
+            </div>
+            <div class="experience-card">
+                <h3 data-i18n="experience.hablax.title">HABLAX INC</h3>
+                <p class="position" data-i18n="experience.hablax.position">Desarrollador de Software de Nivel Medio</p>
+                <p class="date" data-i18n="experience.hablax.date">2018 - 2019</p>
+                <ul>
+                    <li data-i18n="experience.hablax.description1">Liderazgo de equipo frontend, acelerando entrega de features en 40% (JavaScript, React, React Native)</li>
+                    <li data-i18n="experience.hablax.description2">Optimización de interfaz de usuario y tiempos de respuesta (JavaScript, HTML, CSS)</li>
+                </ul>
+            </div>
+            <div class="experience-card">
+                <h3 data-i18n="experience.consortio.title">CONSORCIO CREDICARD C.A</h3>
+                <p class="position" data-i18n="experience.consortio.position">Desarrollador de Software Junior</p>
+                <p class="date" data-i18n="experience.consortio.date">2016 - 2017</p>
+                <ul>
+                    <li data-i18n="experience.consortio.description1">Desarrolle multiples integraciones para app móvil Pos Móvil con diferentes bacnos nacionales, y proveedores de sistemas de pagos como MasterCard y Visa</li>
+                    <li data-i18n="experience.consortio.description2">Implementación de APIs y servicios (Java, Spring Boot, Golang, Typescript, Angular, PostgreSQL, REST, SOAP)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2 class="section-title" data-i18n="contact.title">Contacto</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> <span data-i18n="contact.email">edwar.susarra@gmail.com</span></p>
+                <p><i class="fas fa-phone"></i> <span data-i18n="contact.phone">+58 4128093729</span></p>
+                <div class="social-links">
+                    <a href="https://github.com/1terabit" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/Susarraed" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025. <span data-i18n="footer.rights">Todos los derechos reservados. </span></p>
+    </footer>
+    
+    <script src="js/translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
