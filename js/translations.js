@@ -17,7 +17,7 @@ const translations = {
             education: {
                 title: 'Educación',
                 degree: 'TSU en Informática, IUTA, 2013 - 2017',
-                languages: 'Español nativo, Inglés intermedio'
+                languages: 'Español nativo, Inglés B1'
             }
         },
         skills: {
@@ -149,7 +149,7 @@ const translations = {
             education: {
                 title: 'Education',
                 degree: 'Technical Degree in Computer Science, IUTA, 2013 - 2017',
-                languages: 'Native Spanish, Intermediate English'
+                languages: 'Native Spanish, B1 English'
             }
         },
         skills: {
