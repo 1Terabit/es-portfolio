@@ -14,11 +14,11 @@ const translations = {
         about: {
             title: 'Sobre Mí',
             description: 'Desarrollador de Software Senior con amplia experiencia en desarrollo Full Stack y especialización en Backend. Certificado como Ethical Hacker (CEH), con un historial probado en la construcción de sistemas robustos y escalables.',
-            education: {
-                title: 'Educación',
-                degree: 'TSU en Informática, IUTA, 2013 - 2017',
-                languages: 'Español nativo, Inglés B1'
-            }
+            // education: {
+            //     title: 'Educación',
+            //     degree: 'Ingeniero en Informática',
+            //     languages: 'Español nativo, Inglés B1'
+            // }
         },
         skills: {
             title: 'Habilidades Técnicas',
@@ -146,11 +146,11 @@ const translations = {
         about: {
             title: 'About Me',
             description: 'Senior Software Developer with extensive experience in Full Stack development and Backend specialization. Certified Ethical Hacker (CEH) with a proven track record in building robust and scalable systems.',
-            education: {
-                title: 'Education',
-                degree: 'Technical Degree in Computer Science, IUTA, 2013 - 2017',
-                languages: 'Native Spanish, B1 English'
-            }
+            // education: {
+            //     title: 'Education',
+            //     degree: 'Technical Degree in Computer Science, IUTA, 2013 - 2017',
+            //     languages: 'Native Spanish, B1 English'
+            // }
         },
         skills: {
             title: 'Technical Skills',
