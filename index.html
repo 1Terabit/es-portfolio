@@ -6,7 +6,7 @@
     <title>Edwar Susarra - Desarrollador Full Stack</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="icon" href="resources/black.png" type="image/png">
+    <link rel="icon" href="resources/logo.png" type="image/png">
 </head>
 <body>
     <nav class="navbar">
@@ -15,7 +15,6 @@
             <option value="en">🇺🇸</option>
         </select>
     </nav>
-
     <section id="home" class="hero">
         <div class="binary-rain"></div>
         <div class="hero-content">
@@ -196,5 +195,15 @@
     
     <script src="js/translations.js"></script>
     <script src="script.js"></script>
+    <script>
+    const dropdownLinks = document.querySelectorAll('.dropdown-content a');
+    dropdownLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            const lang = this.getAttribute('data-lang');
+            alert('Idioma cambiado a: ' + lang);
+        });
+    });
+    </script>
 </body>
 </html>
