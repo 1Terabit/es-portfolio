@@ -124,9 +124,7 @@ const translations = {
         },
         contact: {
             title: 'Contacto',
-            email: 'susarraed@gmail.com',
-            phone: '+58 4128093729'
-        },
+            email: 'susarraed@gmail.com'        },
         footer: {
             rights: 'Todos los derechos reservados.'
         }
@@ -256,9 +254,7 @@ const translations = {
         },
         contact: {
             title: 'Contact',
-            email: 'susarraed@gmail.com',
-            phone: '+58 4128093729'
-        },
+            email: 'susarraed@gmail.com'        },
         footer: {
             rights: 'All rights reserved.'
         }
