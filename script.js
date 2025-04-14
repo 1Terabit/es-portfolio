@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Cargar el idioma preferido al iniciar
-  const savedLanguage = localStorage.getItem("preferred-language") || "es";
+  const savedLanguage = localStorage.getItem("preferred-language") || "en";
   setLanguage(savedLanguage);
 
   // Establecer el radio button correcto al cargar

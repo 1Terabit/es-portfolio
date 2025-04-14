@@ -24,7 +24,7 @@ const translations = {
             title: 'Habilidades Técnicas',
             languages: {
                 title: 'Lenguajes',
-                description: 'Typescript/Javascript, Java, Python, Golang'
+                description: 'Typescript/Javascript, Java, Python, Golang, PHP'
             },
             cloud: {
                 title: 'Cloud & DevOps',
@@ -36,7 +36,7 @@ const translations = {
             },
             backend: {
                 title: 'Backend',
-                description: 'Django, NodeJS, NestJS, Spring Boot, Echo'
+                description: 'Django, FastAPI, NodeJS, NestJS, Spring Boot, Echo, Laravel'
             },
             frontend: {
                 title: 'Frontend & Mobile',
@@ -154,7 +154,7 @@ const translations = {
             title: 'Technical Skills',
             languages: {
                 title: 'Languages',
-                description: 'Typescript/Javascript, Java, Python, Golang'
+                description: 'Typescript/Javascript, Java, Python, Golang, PHP'
             },
             cloud: {
                 title: 'Cloud & DevOps',
@@ -166,7 +166,7 @@ const translations = {
             },
             backend: {
                 title: 'Backend',
-                description: 'Django, NodeJS, NestJS, Spring Boot, Echo'
+                description: 'Django, FastAPI, NodeJS, NestJS, Spring Boot, Echo, Laravel'
             },
             frontend: {
                 title: 'Frontend & Mobile',
