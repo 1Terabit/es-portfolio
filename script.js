@@ -149,39 +149,107 @@ document.addEventListener("DOMContentLoaded", () => {
     languageRadio.checked = true;
   }
 
+  // Configuración de temas
+  const themes = {
+    light: {
+      name: "light",
+      icon: "fa-sun",
+      logoDisplay: { light: "block", dark: "none" },
+    },
+    dark: {
+      name: "dark",
+      icon: "fa-moon",
+      logoDisplay: { light: "none", dark: "block" },
+    },
+  };
+
   // Función para cambiar el tema
   function toggleTheme() {
     const html = document.documentElement;
-    const themeToggleIcon = document.querySelector(".theme-toggle i");
+    const currentTheme = html.getAttribute("data-theme") || "light";
+    const newTheme = currentTheme === "light" ? "dark" : "light";
+
+    // Cambiar tema
+    html.setAttribute("data-theme", themes[newTheme].name);
+
+    // Actualizar ícono
+    const themeToggleIcon = document.getElementById("theme-toggle-icon");
+    if (themeToggleIcon) {
+      themeToggleIcon.className = `fas ${themes[newTheme].icon}`;
+    }
+
+    // Cambiar logos
     const logoImageLight = document.getElementById("logoImageLight");
     const logoImageDark = document.getElementById("logoImageDark");
 
-    if (html.getAttribute("data-theme") === "dark") {
-      html.removeAttribute("data-theme");
-      themeToggleIcon.className = "fas fa-sun";
-      localStorage.setItem("theme", "light");
-      logoImageLight.style.display = "block";
-      logoImageDark.style.display = "none";
-    } else {
-      html.setAttribute("data-theme", "dark");
-      themeToggleIcon.className = "fas fa-moon";
-      localStorage.setItem("theme", "dark");
-      logoImageLight.style.display = "none";
-      logoImageDark.style.display = "block";
+    if (logoImageLight) {
+      logoImageLight.style.display = themes[newTheme].logoDisplay.light;
+    }
+
+    if (logoImageDark) {
+      logoImageDark.style.display = themes[newTheme].logoDisplay.dark;
+    }
+
+    // Guardar preferencia
+    localStorage.setItem("theme", newTheme);
+  }
+
+  // Agregar botón de tema si no existe
+  function addThemeToggle() {
+    const navbar = document.querySelector(".navbar");
+    const languageSelector = document.querySelector(".language-selector");
+
+    // Verificar si el botón ya existe
+    if (
+      navbar &&
+      languageSelector &&
+      !document.getElementById("theme-toggle")
+    ) {
+      const themeToggleButton = document.createElement("div");
+      themeToggleButton.id = "theme-toggle";
+      themeToggleButton.classList.add("theme-toggle");
+      themeToggleButton.innerHTML = `
+        <button aria-label="Cambiar tema">
+          <i id="theme-toggle-icon" class="fas fa-moon"></i>
+        </button>
+      `;
+      themeToggleButton.addEventListener("click", toggleTheme);
+
+      // Insertar al principio del navbar
+      navbar.insertBefore(themeToggleButton, languageSelector);
     }
   }
 
-  // Event listener para el botón de tema
-  document
-    .querySelector(".theme-toggle")
-    .addEventListener("click", toggleTheme);
+  // Inicializar tema
+  function initTheme() {
+    const savedTheme = localStorage.getItem("theme") || "light";
+    const html = document.documentElement;
 
-  // Cargar el tema preferido al iniciar
-  const savedTheme = localStorage.getItem("theme");
-  const themeToggleIcon = document.querySelector(".theme-toggle i");
+    // Establecer tema
+    html.setAttribute("data-theme", savedTheme);
 
-  if (savedTheme === "dark") {
-    document.documentElement.setAttribute("data-theme", "dark");
-    themeToggleIcon.className = "fas fa-moon";
+    // Actualizar ícono
+    const themeToggleIcon = document.getElementById("theme-toggle-icon");
+    if (themeToggleIcon) {
+      themeToggleIcon.className = `fas ${themes[savedTheme].icon}`;
+    }
+
+    // Ajustar logos
+    const logoImageLight = document.getElementById("logoImageLight");
+    const logoImageDark = document.getElementById("logoImageDark");
+
+    if (logoImageLight) {
+      logoImageLight.style.display = themes[savedTheme].logoDisplay.light;
+    }
+
+    if (logoImageDark) {
+      logoImageDark.style.display = themes[savedTheme].logoDisplay.dark;
+    }
   }
+
+  // Agregar botón de tema
+  addThemeToggle();
+
+  // Inicializar tema
+  initTheme();
 });

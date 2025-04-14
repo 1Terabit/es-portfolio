@@ -208,7 +208,7 @@ const translations = {
             acidlabs: {
                 title: 'ACIDLABS - LATAM AIRLINES',
                 position: 'Senior Software Developer',
-                date: '2024 - Present',
+                date: '2024 - 2025',
                 description1: 'I lead the frontend area of the VideoWall project, refactoring and implementing code while optimizing the development to production flow. (Technologies: Typescript/Javascript, React, Node.js, Looker, Docker)',
                 description2: 'I addressed technical debt and implemented business-driven improvements to increase system efficiency. (Technologies: Java, Spring Boot, Hibernate, Python, Django, GCP, PostgreSQL, MongoDB)',
                 description3: 'I supervise the entire stack (frontend + backend), refactoring cloud functions, and optimizing the performance of services. (Technologies: GCP, Cloud Functions, Kafka)'

@@ -16,6 +16,23 @@
     --gray-light: #f3f4f6;
     --secondary-color: #1e40af;
     --selector-lg: transparent;
+
+    /* Tema Claro */
+    --background-light: #f4f4f4;
+    --text-color-light: #333;
+    --card-bg-light: #ffffff;
+    --card-shadow-light: rgba(0, 0, 0, 0.1);
+    --navbar-bg-light: rgba(255, 255, 255, 0.8);
+
+    /* Tema Oscuro */
+    --background-dark: #121212;
+    --text-color-dark: #e0e0e0;
+    --card-bg-dark: #1e1e1e;
+    --card-shadow-dark: rgba(0, 0, 0, 0.3);
+    --navbar-bg-dark: rgba(30, 30, 30, 0.8);
+
+    /* Transiciones */
+    --transition-speed: 0.3s;
 }
 
 [data-theme="dark"] {
@@ -69,6 +86,46 @@
 [data-theme="dark"] .highlight-card {
     background: linear-gradient(135deg, #111111 0%, #1a1a1a 100%);
     border-left: 4px solid var(--primary-color);
+}
+
+/* Tema Claro */
+html[data-theme='light'] {
+    background-color: var(--background-light);
+    color: var(--text-color-light);
+}
+
+html[data-theme='light'] .navbar {
+    background-color: var(--navbar-bg-light);
+}
+
+html[data-theme='light'] .skill-card,
+html[data-theme='light'] .experience-card {
+    background-color: var(--card-bg-light);
+    box-shadow: 0 4px 6px var(--card-shadow-light);
+}
+
+/* Tema Oscuro */
+html[data-theme='dark'] {
+    background-color: var(--background-dark);
+    color: var(--text-color-dark);
+}
+
+html[data-theme='dark'] .navbar {
+    background-color: var(--navbar-bg-dark);
+}
+
+html[data-theme='dark'] .skill-card,
+html[data-theme='dark'] .experience-card {
+    background-color: var(--card-bg-dark);
+    box-shadow: 0 4px 6px var(--card-shadow-dark);
+}
+
+/* Transiciones globales */
+* {
+    transition: 
+        background-color var(--transition-speed) ease,
+        color var(--transition-speed) ease,
+        box-shadow var(--transition-speed) ease;
 }
 
 /* Reset y estilos base */
@@ -177,16 +234,64 @@ body {
 .navbar {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
-    background-color: transparent; /* Ajusta la opacidad según sea necesario */
-    backdrop-filter: blur(10px); /* Agrega un efecto de desenfoque si lo deseas */
-    padding: 1rem 5%;
+    z-index: 1000;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    box-shadow: 0 2px 10px var(--shadow-color);
-    z-index: 1000;
-    overflow: hidden;
+    justify-content: flex-end;
+    padding: 10px 20px;
+    background: transparent;
+    transition: background 0.3s ease;
+}
+
+.language-selector {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    padding: 5px 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.flag-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    margin: 0 5px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.flag-label input {
+    display: none;
+}
+
+.flag-label span {
+    font-size: 24px;
+    transition: transform 0.2s ease;
+}
+
+.flag-label input:checked + * {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Tema oscuro */
+html[data-theme='dark'] .language-selector {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-right: 35px;
+}
+
+html[data-theme='dark'] .flag-label input:checked + * {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .logo {
@@ -276,6 +381,7 @@ body {
 .language-selector {
     display: flex;
     align-items: center;
+    margin-right: 35px;
 }
 
 .language-selector select {
@@ -306,21 +412,32 @@ body {
 }
 
 .theme-toggle {
-    background: none;
+    background: transparent;
     border: none;
-    color: var(--text-color);
     cursor: pointer;
-    font-size: 1.2rem;
-    margin-left: 1rem;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: transform 0.3s ease;
+}
+
+.theme-toggle i {
+    font-size: 20px;
+    color: var(--text-color);
+    transition: color 0.3s ease;
 }
 
 .theme-toggle:hover {
     transform: scale(1.1);
 }
 
-.theme-toggle i {
-    transition: transform 0.5s ease;
+html[data-theme='dark'] .theme-toggle i {
+    color: #f0f0f0;
+}
+
+html[data-theme='light'] .theme-toggle i {
+    color: #333;
 }
 
         .dropdown {
@@ -412,8 +529,12 @@ body {
     animation: fadeInUp 0.8s ease 0.2s forwards;
 }
 
-[data-theme="dark"] .subtitle {
-    color: #ffffff;
+html[data-theme='light'] .subtitle {
+    color: #333;
+}
+
+html[data-theme='dark'] .subtitle {
+    color: #f0f0f0;
 }
 
 /* About Section */
@@ -463,9 +584,9 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 300vh;
+    height: 100%;
     pointer-events: none;
-    z-index: -1;
+    overflow: hidden;
 }
 
 /* Skills Section */
@@ -780,4 +901,50 @@ footer {
         font-size: 1.2rem;
         line-height: 1.5;
     }
+}
+
+#theme-toggle {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    order: -1; /* Asegura que esté al principio */
+}
+
+#theme-toggle button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    transition: transform 0.3s ease;
+}
+
+#theme-toggle button:hover {
+    transform: scale(1.1);
+}
+
+#theme-toggle button i {
+    font-size: 20px;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+html[data-theme='dark'] #theme-toggle button i {
+    color: #f0f0f0;
+}
+
+html[data-theme='light'] #theme-toggle button i {
+    color: #333;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
 }
