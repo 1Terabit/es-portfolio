@@ -63,6 +63,14 @@ const translations = {
                 description: 'XSS, SQLi, CSRF, RCE, Buffer Overflow, Reverse Engineering, Malware Analysis'
             }
         },
+        certifications: {
+            title: 'Certificaciones',
+            ceh: {
+                title: 'Certified Ethical Hacker (CEH)',
+                org: 'EC-Council',
+                date: '2023'
+            }
+        },
         experience: {
             title: 'Experiencia Laboral',
             current: 'Presente',
@@ -191,6 +199,14 @@ const translations = {
             securityoffensive: {
                 title: 'Offensive Security',
                 description: 'XSS, SQLi, CSRF, RCE, Buffer Overflow, Reverse Engineering, Malware Analysis'
+            }
+        },
+        certifications: {
+            title: 'Certifications',
+            ceh: {
+                title: 'Certified Ethical Hacker (CEH)',
+                org: 'EC-Council',
+                date: '2023'
             }
         },
         experience: {
