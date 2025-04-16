@@ -23,6 +23,10 @@
     --card-bg-light: #ffffff;
     --card-shadow-light: rgba(0, 0, 0, 0.1);
     --navbar-bg-light: rgba(255, 255, 255, 0.8);
+    --cert-card-bg: #fff;
+    --cert-title-color: #222;
+    --cert-org-color: #444;
+    --cert-date-color: #3fa6ff;
 
     /* Tema Oscuro */
     --background-dark: #121212;
@@ -51,6 +55,10 @@
     --gray-light: #2f363d;
     --secondary-color: #2c3e50;
     --selector-lg: transparent;
+    --cert-card-bg: #23272f;
+    --cert-title-color: #e3e3e3;
+    --cert-org-color: #bfc9d1;
+    --cert-date-color: #8eb9ff;
 }
 
 /* Estilos para títulos en tema oscuro */
@@ -964,13 +972,13 @@ html[data-theme='light'] #theme-toggle button i {
 }
 
 .certification-card {
-  background: var(--card-bg, #23272f);
+  background: var(--cert-card-bg);
   border-radius: 18px;
   box-shadow: 0 4px 18px rgba(0,0,0,0.13);
   display: flex;
   align-items: center;
   padding: 1.2rem 1.5rem;
-  transition: transform 0.18s, box-shadow 0.18s;
+  transition: transform 0.18s, box-shadow 0.18s, background 0.3s, color 0.3s;
   min-width: 240px;
   max-width: 350px;
   width: 100%;
@@ -996,17 +1004,17 @@ html[data-theme='light'] #theme-toggle button i {
   font-size: 1.1rem;
   margin: 0 0 0.2rem 0;
   font-weight: 600;
-  color: #e3e3e3;
+  color: var(--cert-title-color);
 }
 
 .cert-org {
   font-size: 0.98rem;
-  color: #bfc9d1;
+  color: var(--cert-org-color);
   margin-bottom: 0.2rem;
 }
 
 .cert-date {
   font-size: 0.95rem;
-  color: #8eb9ff;
+  color: var(--cert-date-color);
   font-weight: 500;
 }
