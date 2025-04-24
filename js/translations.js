@@ -132,7 +132,9 @@ const translations = {
         },
         contact: {
             title: 'Contacto',
-            email: 'susarraed@gmail.com'        },
+            email: 'susarraed@gmail.com',
+            WhatsApp: '+584128083729'
+        },
         footer: {
             rights: 'Todos los derechos reservados.'
         }
@@ -270,7 +272,9 @@ const translations = {
         },
         contact: {
             title: 'Contact',
-            email: 'susarraed@gmail.com'        },
+            email: 'susarraed@gmail.com',
+            WhatsApp: '+584128083729'
+        },
         footer: {
             rights: 'All rights reserved.'
         }
