@@ -25,11 +25,11 @@ const translations = {
       title: "Habilidades Técnicas",
       languages: {
         title: "Lenguajes",
-        description: "Typescript/Javascript, Java, Python, Golang, PHP",
+        description: "Typescript/Javascript, Java, Python, Golang, PHP, Solidity",
       },
       cloud: {
         title: "Cloud & DevOps",
-        description: "GCP, AWS, Docker, Kubernetes, GitLab CI/CD, Terraform",
+        description: "GCP, AWS, Docker, Podman, Kubernetes, GitLab CI/CD, Terraform",
       },
       databases: {
         title: "Bases de Datos",
@@ -193,11 +193,11 @@ const translations = {
       title: "Technical Skills",
       languages: {
         title: "Languages",
-        description: "Typescript/Javascript, Java, Python, Golang, PHP",
+        description: "Typescript/Javascript, Java, Python, Golang, PHP, Solidity",
       },
       cloud: {
         title: "Cloud & DevOps",
-        description: "GCP, AWS, Docker, Kubernetes, GitLab CI/CD, Terraform",
+        description: "GCP, AWS, Docker, Podman, Kubernetes, GitLab CI/CD, Terraform",
       },
       databases: {
         title: "Databases",
