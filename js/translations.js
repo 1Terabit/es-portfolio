@@ -107,7 +107,7 @@ const translations = {
           "Superviso toda la pila (frontend + backend), refactorizando cloud functions, y optimizando el rendimiento  de los servicios (Tecnologías: GCP, Cloud Functions, Kafka)  ",
       },
       witi: {
-        title: "WITI - CENCOSUD CHILE",
+        title: "CENCOSUD CHILE",
         position: "Desarrollador de Software Senior",
         date: "2021 - 2024",
         description1:
@@ -275,7 +275,7 @@ const translations = {
           "I supervise the entire stack (frontend + backend), refactoring cloud functions, and optimizing the performance of services. (Technologies: GCP, Cloud Functions, Kafka)",
       },
       witi: {
-        title: "WITI - CENCOSUD CHILE",
+        title: "CENCOSUD CHILE",
         position: "Senior Software Developer",
         date: "2021 - 2024",
         description1:
